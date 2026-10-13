@@ -5,21 +5,35 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "scheme": "tuitiontracker",
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "package": "com.tuitiontracker.app",
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#0A0F1E",
+        "foregroundImage": "./assets/icon.png"
       },
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "@react-native-google-signin/google-signin",
+      "expo-status-bar"
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "cad72e26-99ed-49c0-9863-2c48902c0c60"
+      }
     }
   }
 }
